@@ -1,9 +1,13 @@
 {
   "name": "typedcssx-next-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "main": "dist/index.js",
   "author": "Refirst",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typedcsslab/typedcssx.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.25.2",
