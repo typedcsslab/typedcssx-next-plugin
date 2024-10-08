@@ -3,7 +3,7 @@
 ## Documentation
 
 https://typedcssx.vercel.app  
-Optimize redundant class names in CSSModule and Tree Shaking with next's webpack.
+Optimize redundant class names in CSSModule. And Tree Shaking with next's webpack.
 
 ## Installation
 
