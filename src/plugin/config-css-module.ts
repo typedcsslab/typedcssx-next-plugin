@@ -22,14 +22,13 @@ export function configCSSModule(config: Configuration): Configuration {
     rule.use.forEach((moduleLoader) => {
       if (
         typeof moduleLoader === "object" &&
-        moduleLoader!.loader?.includes("css-loader")
+        moduleLoader?.loader?.includes("css-loader")
       ) {
         const cssLoader = moduleLoader;
-
         if (
-          typeof cssLoader?.options === "object" &&
+          typeof cssLoader.options === "object" &&
           cssLoader.options !== null
-        )
+        ) {
           cssLoader.options = {
             ...cssLoader.options,
             modules: {
@@ -38,11 +37,10 @@ export function configCSSModule(config: Configuration): Configuration {
                 _context: any,
                 _localIdentName: string,
                 localName: string
-              ) => {
-                return localName;
-              },
+              ) => localName,
             },
           };
+        }
       }
     });
   });
