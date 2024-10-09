@@ -3,7 +3,7 @@
 ## Documentation
 
 https://typedcssx.vercel.app  
-Optimize redundant class names in CSSModule. And Tree Shaking with next's webpack.
+Optimize redundant classnames in next CSSModule.
 
 ## Installation
 
@@ -17,7 +17,6 @@ Add the under to your `next.config.js`
 const { configCSSModule } = require("typedcssx-next-plugin");
 const nextConfig = {
   webpack: (config) => {
-    config.optimization.usedExports = true;
     return configCSSModule(config);
   },
 };
